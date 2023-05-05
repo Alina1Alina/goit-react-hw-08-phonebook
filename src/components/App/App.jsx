@@ -3,17 +3,17 @@ import Navigation from 'components/Navigation/Navigation'
 import Loader from 'components/Loader/Loader';
 import { fetchCurrentUser } from 'Redux/auth/auth-operations';
 import { selectorIsRefreshing } from 'Redux/auth/auth-selectors';
-import { PrivateRoute } from 'Redux/PrivateRoute';
-import { RestrictedRoute } from 'Redux/RestrictedRoute';
+import { PrivateRoute } from 'components/PrivateRoute';
+import { RestrictedRoute } from 'components/RestrictedRoute';
 
 import { Routes, Route } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, lazy, Suspense  } from 'react';
 
-const Home = lazy(() => import('components/Home/Home'));
-const Register = lazy(() => import('components/Register/Register'));
-const Login = lazy(() => import('components/Login/Login'));
-const Contacts = lazy(() => import('components/Contacts/Contacts'));
+const Home = lazy(() => import('components/Pages/Home'));
+const Register = lazy(() => import('components/Pages/Register'));
+const Login = lazy(() => import('components/Pages/Login'));
+const Contacts = lazy(() => import('components/Pages/Contacts'));
 
 export const App = () => {
   const isRefreshing = useSelector(selectorIsRefreshing);
