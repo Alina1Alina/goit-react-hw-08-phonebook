@@ -15,8 +15,6 @@ import { useDispatch } from 'react-redux';
 import { register } from 'Redux/auth/auth-operations';
 import { StyledLink } from 'components/ContactForm/StyledContactForm';
 
-
-
 const theme = createTheme();
 
 export default function Register() {
